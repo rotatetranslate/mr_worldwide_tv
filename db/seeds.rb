@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
+Video.delete_all
 
 user = User.new(
   email:                  'adam@email.com',
@@ -15,4 +16,9 @@ user = User.new(
 )
 user.save
 
-puts user.errors.full_messages
+timber = Video.create(
+  youtube_id: 'hHUbLv4ThOo',
+  title: 'Timber'
+)
+
+puts timber.errors.full_messages
