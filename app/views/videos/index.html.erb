@@ -15,6 +15,12 @@
   <% end %>
 
   <ul class="videos">
-    <li>I'm a video</li>
+    <% @videos.each do |video| %>
+    <li>
+      <strong><%= video.title %></strong>
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+    </li>
+    <% end %>
   </ul>
 </main>
