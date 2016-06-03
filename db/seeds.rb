@@ -8,6 +8,7 @@
 
 User.delete_all
 Video.delete_all
+Tag.delete_all
 
 user = User.new(
   email:                  'adam@email.com',
@@ -21,4 +22,6 @@ timber = Video.create(
   title: 'Timber'
 )
 
-puts timber.errors.full_messages
+dale = Tag.create word: '#dale'
+
+puts dale.errors.full_messages
