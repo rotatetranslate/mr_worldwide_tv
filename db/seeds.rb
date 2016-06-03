@@ -22,6 +22,20 @@ timber = Video.create(
   title: 'Timber'
 )
 
-dale = Tag.create word: '#dale'
+calle_ocho = Video.create(
+  youtube_id: 'E2tMV96xULk',
+  title: 'Calle Ocho'
+)
 
-puts dale.errors.full_messages
+dale = Tag.create word: '#dale'
+kesha = Tag.create word: '#ke$ha'
+
+timber.tags << dale << kesha
+calle_ocho.tags << dale
+
+puts timber.tags
+puts calle_ocho.tags
+puts dale.videos
+puts kesha.videos
+
+
