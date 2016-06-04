@@ -1,0 +1,13 @@
+<h3><em>Video Data</em></h3>
+
+<%= form_for @video do |f| %>
+  Youtube ID <%= f.text_field :youtube_id %> <br>
+  Title <%= f.text_field :title %> <br>
+  Album <%= f.text_field :album %> <br>
+  Featured Artists <%= f.text_field :featured_artists %> <br>
+  Released on: <%= f.date_field :released_on %> <br>
+
+  <%= f.submit "Dale!" %>
+<% end %>
+
+

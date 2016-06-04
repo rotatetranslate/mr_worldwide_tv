@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root "videos#index"
 
-  resources :videos, only: [:index]
+  resources :videos, only: [:index, :new, :create]
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
